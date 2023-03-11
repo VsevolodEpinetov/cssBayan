@@ -9,8 +9,28 @@ body {
 }
 
 .accordion-wrapper {
-  display: flex;
+  /*display: flex;
   align-items: center;
   flex-direction: column;
-  text-align: left;
+  text-align: left;*/
+}
+
+.inner-content {
+  display: none;
+}
+
+input:checked ~ .inner-content {
+  display: block;
+}
+
+input:checked ~ label {
+  font-weight: bold;
+}
+
+input:not(:checked):hover ~ .inner-content {
+  display: block;
+}
+
+input {
+  display: none;
 }
