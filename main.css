@@ -31,6 +31,10 @@ input:not(:checked):hover ~ .inner-content {
   display: block;
 }
 
+input:not(:checked):active ~ label {  
+  color: blue;
+}
+
 input {
   display: none;
 }
