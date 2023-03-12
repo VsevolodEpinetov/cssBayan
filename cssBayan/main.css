@@ -12,7 +12,7 @@ body {
 }
 
 main {
-  width: 420px;
+  width: 26.25rem;
   margin: auto;
 }
 
@@ -26,12 +26,12 @@ main:not(:hover) > .accordion-wrapper > .accordion-item-wrapper > input ~ label:
 
 img {
   width: auto;
-  height: 200px;
+  height: 12.5rem;
 }
 
 h1 {
   text-align: center;
-  font-size: 70px;
+  font-size: 4.375rem;
 }
 
 .accordion-wrapper {
@@ -50,16 +50,17 @@ h1 {
 label {
   display: block;
   height: auto;
-  width: 400px;
+  width: 25rem;
   background-color: #333333;
-  padding: 15px;
-  margin: 5px;
+  padding: 0.9375rem;
+  margin: 0.3125rem;
   transition: all 250ms ease;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 label::after {
-  content: '+';
+  font-family: "Material Icons";
+  content: '\e5d7';
   float: right;
 }
 
@@ -76,11 +77,11 @@ label::after {
 }
 
 input:checked ~ .inner-content {
-  height: 200px;
+  height: 12.5rem;
 }
 
 input:checked ~ .inner-content > .img-content {
-  height: 200px;
+  height: 12.5rem;
   opacity: 1;
 }
 
@@ -89,15 +90,15 @@ input:checked ~ label {
 }
 
 input:checked ~ label::after {
-  content: 'Y';
+  content: "\e5d6";
 }
 
 input:not(:checked):hover ~ .inner-content {
-  height: 200px;
+  height: 12.5rem;
 }
 
 input:not(:checked):hover ~ .inner-content > .img-content {
-  height: 200px;
+  height: 12.5rem;
   opacity: 1;
 }
 
@@ -106,8 +107,12 @@ input:not(:checked):active ~ label {
   color: #9e9eff;
 }
 
+input:not(:checked):active ~ .inner-content > .img-content {  
+  opacity: 0.5;
+}
+
 input:not(:checked):hover ~ label::after {  
-  content: "Y";
+  content: "\e5d6";
 }
 
 input {
@@ -116,113 +121,113 @@ input {
 
 @media only screen and (max-width: 319px) {
   img {
-    height: 100px;
+    height: 6.25rem;
   }
   input:checked ~ .inner-content {
-    height: 100px;
+    height: 6.25rem;
   }
   input:not(:checked):hover ~ .inner-content {
-    height: 100px;
+    height: 6.25rem;
   }
   input:checked ~ .inner-content > .img-content {
-    height: 100px;
+    height: 6.25rem;
   }
   input:not(:checked):hover ~ .inner-content > .img-content {
-    height: 100px;
+    height: 6.25rem;
   }
   main {
-    width: 220px;
+    width: 13.75rem;
   }
   label {
-    width: 200px;
-    font-size: 16px;
+    width: 12.5rem;
+    font-size: 1rem;
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 3.125rem;
   }
 } 
 
 @media only screen and (min-width: 320px) and (max-width: 819px) {
   img {
-    height: 150px;
+    height: 9.375rem;
   }
   input:checked ~ .inner-content {
-    height: 150px;
+    height: 9.375rem;
   }
   input:not(:checked):hover ~ .inner-content {
-    height: 150px;
+    height: 9.375rem;
   }
   input:checked ~ .inner-content > .img-content {
-    height: 150px;
+    height: 9.375rem;
   }
   input:not(:checked):hover ~ .inner-content > .img-content {
-    height: 150px;
+    height: 9.375rem;
   }
   main {
-    width: 320px;
+    width: 20rem;
   }
   label {
-    width: 300px;
-    font-size: 20px;
+    width: 18.75rem;
+    font-size: 1.25rem;
   }
   h1 {
-    font-size: 60px;
+    font-size: 3.75rem;
   }
 } 
 
 @media only screen and (min-width: 820px) and (max-width: 1919px) {
   img {
-    height: 200px;
+    height: 12.5rem;
   }
   input:checked ~ .inner-content {
-    height: 200px;
+    height: 12.5rem;
   }
   input:not(:checked):hover ~ .inner-content {
-    height: 200px;
+    height: 12.5rem;
   }
   input:checked ~ .inner-content > .img-content {
-    height: 200px;
+    height: 12.5rem;
   }
   input:not(:checked):hover ~ .inner-content > .img-content {
-    height: 200px;
+    height: 12.5rem;
   }
   main {
-    width: 620px;
+    width: 38.75rem;
   }
   label {
-    width: 600px;
-    font-size: 22px;
+    width: 37.5rem;
+    font-size: 1.375rem;
   }
   h1 {
-    font-size: 70px;
+    font-size: 4.375rem;
   }
 } 
 
 @media only screen and (min-width: 1920px) {
   img {
-    height: 250px;
+    height: 15.625rem;
   }
   input:checked ~ .inner-content {
-    height: 250px;
+    height: 15.625rem;
   }
   input:not(:checked):hover ~ .inner-content {
-    height: 250px;
+    height: 15.625rem;
   }
   input:checked ~ .inner-content > .img-content {
-    height: 250px;
+    height: 15.625rem;
   }
   input:not(:checked):hover ~ .inner-content > .img-content {
-    height: 250px;
+    height: 15.625rem;
   }
   main {
-    width: 720px;
+    width: 45rem;
   }
   label {
-    width: 700px;
-    font-size: 24px;
+    width: 43.75rem;
+    font-size: 1.5rem;
   }
   h1 {
-    font-size: 80px;
+    font-size: 5rem;
   }
 } 
