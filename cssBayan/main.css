@@ -1,0 +1,233 @@
+@import url('https://css.gg/css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #FEAC5E 0%, #C779D0 50%, #4BC0C8 100%);
+  min-height: 100vh;
+  color: #e7e7e7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+  width: 26.25rem;
+  margin: auto;
+}
+
+main:not(:hover) > .accordion-wrapper > .accordion-item-wrapper > input:not(:checked) ~ label {
+  color: rgb(218, 219, 142);
+}
+
+main:not(:hover) > .accordion-wrapper > .accordion-item-wrapper > input ~ label::after {
+  visibility: hidden;
+}
+
+img {
+  width: auto;
+  height: 12.5rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.375rem;
+}
+
+.accordion-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+  transition: all 500ms ease;
+}
+
+.accordion-item-wrapper {
+  margin: auto;
+  display: block;
+}
+
+label {
+  display: block;
+  height: auto;
+  width: 25rem;
+  background-color: #333333;
+  padding: 0.9375rem;
+  margin: 0.3125rem;
+  transition: all 250ms ease;
+  font-size: 1.25rem;
+}
+
+label::after {
+  font-family: "Material Icons";
+  content: '\e5d7';
+  float: right;
+}
+
+.inner-content {
+  height: 0;
+  text-align: center;
+  transition: all 500ms;
+}
+
+.img-content {
+  height: 0;
+  opacity: 0;
+  transition: all 500ms;
+}
+
+input:checked ~ .inner-content {
+  height: 12.5rem;
+}
+
+input:checked ~ .inner-content > .img-content {
+  height: 12.5rem;
+  opacity: 1;
+}
+
+input:checked ~ label {
+  font-weight: bold;
+}
+
+input:checked ~ label::after {
+  content: "\e5d6";
+}
+
+input:not(:checked):hover ~ .inner-content {
+  height: 12.5rem;
+}
+
+input:not(:checked):hover ~ .inner-content > .img-content {
+  height: 12.5rem;
+  opacity: 1;
+}
+
+
+input:not(:checked):active ~ label {  
+  color: #9e9eff;
+}
+
+input:not(:checked):active ~ .inner-content > .img-content {  
+  opacity: 0.5;
+}
+
+input:not(:checked):hover ~ label::after {  
+  content: "\e5d6";
+}
+
+input {
+  display: none;
+}
+
+@media only screen and (max-width: 319px) {
+  img {
+    height: 6.25rem;
+  }
+  input:checked ~ .inner-content {
+    height: 6.25rem;
+  }
+  input:not(:checked):hover ~ .inner-content {
+    height: 6.25rem;
+  }
+  input:checked ~ .inner-content > .img-content {
+    height: 6.25rem;
+  }
+  input:not(:checked):hover ~ .inner-content > .img-content {
+    height: 6.25rem;
+  }
+  main {
+    width: 13.75rem;
+  }
+  label {
+    width: 12.5rem;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+  }
+} 
+
+@media only screen and (min-width: 320px) and (max-width: 819px) {
+  img {
+    height: 9.375rem;
+  }
+  input:checked ~ .inner-content {
+    height: 9.375rem;
+  }
+  input:not(:checked):hover ~ .inner-content {
+    height: 9.375rem;
+  }
+  input:checked ~ .inner-content > .img-content {
+    height: 9.375rem;
+  }
+  input:not(:checked):hover ~ .inner-content > .img-content {
+    height: 9.375rem;
+  }
+  main {
+    width: 20rem;
+  }
+  label {
+    width: 18.75rem;
+    font-size: 1.25rem;
+  }
+  h1 {
+    font-size: 3.75rem;
+  }
+} 
+
+@media only screen and (min-width: 820px) and (max-width: 1919px) {
+  img {
+    height: 12.5rem;
+  }
+  input:checked ~ .inner-content {
+    height: 12.5rem;
+  }
+  input:not(:checked):hover ~ .inner-content {
+    height: 12.5rem;
+  }
+  input:checked ~ .inner-content > .img-content {
+    height: 12.5rem;
+  }
+  input:not(:checked):hover ~ .inner-content > .img-content {
+    height: 12.5rem;
+  }
+  main {
+    width: 38.75rem;
+  }
+  label {
+    width: 37.5rem;
+    font-size: 1.375rem;
+  }
+  h1 {
+    font-size: 4.375rem;
+  }
+} 
+
+@media only screen and (min-width: 1920px) {
+  img {
+    height: 15.625rem;
+  }
+  input:checked ~ .inner-content {
+    height: 15.625rem;
+  }
+  input:not(:checked):hover ~ .inner-content {
+    height: 15.625rem;
+  }
+  input:checked ~ .inner-content > .img-content {
+    height: 15.625rem;
+  }
+  input:not(:checked):hover ~ .inner-content > .img-content {
+    height: 15.625rem;
+  }
+  main {
+    width: 45rem;
+  }
+  label {
+    width: 43.75rem;
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+} 
