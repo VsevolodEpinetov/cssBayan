@@ -16,6 +16,11 @@ main {
   margin: auto;
 }
 
+img {
+  width: auto;
+  height: 200px;
+}
+
 h1 {
   text-align: center;
   font-size: 70px;
@@ -51,12 +56,22 @@ label::after {
 
 .inner-content {
   height: 0;
+  text-align: center;
+  transition: all 500ms;
+}
+
+.img-content {
+  height: 0;
   opacity: 0;
-  transition: all 500ms ease-in-out, opacity 0;
+  transition: all 500ms;
 }
 
 input:checked ~ .inner-content {
-  height: auto;
+  height: 200px;
+}
+
+input:checked ~ .inner-content > .img-content {
+  height: 200px;
   opacity: 1;
 }
 
@@ -69,12 +84,17 @@ input:checked ~ label::after {
 }
 
 input:not(:checked):hover ~ .inner-content {
-  height: auto;
+  height: 200px;
+}
+
+input:not(:checked):hover ~ .inner-content > .img-content {
+  height: 200px;
   opacity: 1;
 }
 
+
 input:not(:checked):active ~ label {  
-  color: blue;
+  color: #9e9eff;
 }
 
 input:not(:checked):hover ~ label::after {  
